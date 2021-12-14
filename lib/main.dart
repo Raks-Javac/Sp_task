@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_project_template/src/core/cache/gen_cache.dart';
+import 'package:flutter_project_template/src/locator.dart';
+import 'package:flutter_project_template/src/ui/main_platform.dart/main_mobile.dart';
 import 'package:flutter_project_template/src/ui/main_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: '.env');
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // ignore: avoid_print
+  print(dotenv.env['API_URL']);
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData.light(),
-      home: const MainScreen(),
-    );
-  }
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  setupLocator();
+  runApp(ProviderApp(allProviders));
 }

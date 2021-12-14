@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:football_trivia/core/utils/functions.dart';
+import 'package:flutter_project_template/src/core/utils/functions.dart';
+
 
 class Logging extends Interceptor {
   @override
