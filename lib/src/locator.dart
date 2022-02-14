@@ -1,4 +1,4 @@
-import 'package:flutter_project_template/src/core/view_model/base_model.dart';
+import 'package:estate_project/src/core/view_model/base_model.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/core/services/navigation_services.dart';
-import 'package:flutter_project_template/src/core/utils/constants.dart';
-import 'package:flutter_project_template/src/core/utils/styles.dart';
-import 'package:flutter_project_template/src/locator.dart';
-import 'package:flutter_project_template/src/ui/main_screen.dart';
+import 'package:estate_project/src/core/services/navigation_services.dart';
+import 'package:estate_project/src/core/utils/constants.dart';
+import 'package:estate_project/src/core/utils/styles.dart';
+import 'package:estate_project/src/locator.dart';
+import 'package:estate_project/src/ui/main_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 

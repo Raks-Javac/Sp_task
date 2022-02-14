@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:flutter_project_template/src/core/network/gen_req_helpers/interceptors.dart';
+import 'package:estate_project/src/core/network/gen_req_helpers/interceptors.dart';
 
 
 class TriviaGeneralNetworkService {

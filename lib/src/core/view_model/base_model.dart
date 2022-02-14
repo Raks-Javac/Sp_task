@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/core/enums/view_state.dart';
-import 'package:flutter_project_template/src/core/utils/functions.dart';
+import 'package:estate_project/src/core/enums/view_state.dart';
+import 'package:estate_project/src/core/utils/functions.dart';
 
 class BaseModel extends ChangeNotifier {
 //loading function

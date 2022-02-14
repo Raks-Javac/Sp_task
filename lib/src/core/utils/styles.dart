@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_template/src/core/utils/constants.dart';
+import 'package:estate_project/src/core/utils/constants.dart';
 
 class ThemeHandler {
   static ThemeData get lightMode {

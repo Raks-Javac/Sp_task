@@ -1,5 +1,5 @@
-name: flutter_project_template
-description: A project template for your flutter apps
+name: estate_project
+description: An estate project made with flutter 
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
