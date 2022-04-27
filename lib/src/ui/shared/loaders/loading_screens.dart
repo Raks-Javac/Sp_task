@@ -17,7 +17,7 @@ class Loader extends StatelessWidget {
                 height: screenAwareSize(40, context),
                 child: CircularProgressIndicator(
                   strokeWidth: 8,
-                  backgroundColor: AppColors.backgroundColors(),
+                  backgroundColor: Colors.green,
                   valueColor: AlwaysStoppedAnimation<Color>(
                       AppColors.backgroundColors()),
                 )),

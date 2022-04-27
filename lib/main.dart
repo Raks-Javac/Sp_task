@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:estate_project/src/locator.dart';
-import 'package:estate_project/src/ui/main_platform.dart/main_mobile.dart';
+import 'package:estate_project/src/ui/main_platform.dart/mobile/main_mobile.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
