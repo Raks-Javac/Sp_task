@@ -20,8 +20,7 @@ class StringsStore {
   static const String emptyUsernameField = 'Username  cannot be empty';
   static const String usernameLengthError =
       'Username length must be greater than 6';
-  static const String emailRegex = '[a-zA-Z0-9\+\.\_\%\-\+]{1,256}' +
-      '\\@' +
+  static const String emailRegex = '[a-zA-Z0-9+._%-+]{1,256}' '\\@' +
       '[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}' +
       '(' +
       '\\.' +

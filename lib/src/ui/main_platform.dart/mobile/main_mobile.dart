@@ -9,6 +9,7 @@ import 'mobile_pages/first_screen/first_screen.dart';
 
 class ProviderApp extends StatefulWidget {
   final List<SingleChildWidget> multiProvider;
+  // ignore: use_key_in_widget_constructors
   const ProviderApp(this.multiProvider);
 
   @override

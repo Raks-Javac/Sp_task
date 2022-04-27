@@ -68,5 +68,5 @@ double screenAwareSize(double value, BuildContext context,
 }
 
 class AppColors {
-  static Color backgroundColors() => Color(0xFF222222);
+  static Color backgroundColors() => const Color(0xFF222222);
 }
