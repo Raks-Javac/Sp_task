@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:estate_project/src/animations/animate_screen.dart';
-
+import 'package:get_it/get_it.dart';
 
 class NavigationService {
   final GlobalKey<NavigatorState> _navigationKey = GlobalKey<NavigatorState>();
@@ -28,4 +28,16 @@ class NavigationService {
     return _navigationKey.currentState!.pushAndRemoveUntil(
         PreviewSlideRoute(preview: screen, duration: 2), (route) => false);
   }
+}
+
+pushReplaceScreen(Widget screen) {
+  GetIt.I<NavigationService>().navigateToReplacingWidget(screen);
+}
+
+pushScreen(Widget screen) {
+  GetIt.I<NavigationService>().navigateToWidget(screen);
+}
+
+popScreen() {
+  GetIt.I<NavigationService>().pop();
 }
