@@ -6,7 +6,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:estate_project/src/core/network/gen_req_helpers/interceptors.dart';
 
 
-class TriviaGeneralNetworkService {
+class GeneralNetworkService {
   static String get baseUrl => dotenv.env['API_URL'].toString();
 
   final Dio _dio = Dio(

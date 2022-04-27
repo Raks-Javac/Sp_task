@@ -4,7 +4,7 @@ import 'package:estate_project/src/core/utils/constants.dart';
 class ThemeHandler {
   static ThemeData get lightMode {
     return ThemeData(
-      primaryColor: ColorsTexStyleStore.kTriviaGreenColor,
+      primaryColor: ColorsTexStyleStore.kAppMainColor,
       primaryColorLight: ColorsTexStyleStore.kTriviaLightYellow,
       colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: ColorsTexStyleStore.kTriviaLightYellow.withOpacity(0.3)),
@@ -65,4 +65,8 @@ double screenAwareSize(double value, BuildContext context,
   } else {
     return MediaQuery.of(context).size.height * (value / 1181);
   }
+}
+
+class AppColors {
+  static Color backgroundColors() => Color(0xFF222222);
 }

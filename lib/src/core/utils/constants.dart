@@ -49,7 +49,7 @@ class ColorsTexStyleStore {
   static const Color deepGrey = Color(0xFFC4C4C4);
   static const Color kTriviaDarkGrey = Color(0xFFEAEAEA);
   static const Color kTriviaWhiteColor = Colors.white;
-  static const Color kTriviaGreenColor = Colors.green;
+  static const Color kAppMainColor = Colors.green;
   static const Color kTriviaBlack = Colors.black;
   static const Color kTriviaRed = Color(0xFFB80016);
   static const Color kTriviaTransparentColor = Colors.transparent;

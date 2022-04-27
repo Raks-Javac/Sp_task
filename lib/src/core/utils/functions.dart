@@ -2,18 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 
-class TriviaFunctions {
+class AppFunctions {
   logConsole(dynamic data) => debugPrint("$data");
-
-  // //this functiom is to share inputted strings outside theapp using the share package
-  // static void share(String? message) {
-  //   Share.share('$message');
-  // }
-
-  // //this function allows you to copy to clipboad
-  // static Future copy(String? itemToCopy) {
-  //   return FlutterClipboard.copy('$itemToCopy');
-  // }
 
   String removeFirstCharacter(dynamic value) {
     return value.toString().substring(1);

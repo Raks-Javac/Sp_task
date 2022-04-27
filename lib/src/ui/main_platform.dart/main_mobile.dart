@@ -9,7 +9,7 @@ import 'package:provider/single_child_widget.dart';
 
 class ProviderApp extends StatefulWidget {
   final List<SingleChildWidget> multiProvider;
-  ProviderApp(this.multiProvider);
+  const ProviderApp(this.multiProvider);
 
   @override
   _ProviderAppState createState() => _ProviderAppState();
@@ -21,11 +21,8 @@ class _ProviderAppState extends State<ProviderApp> {
     return MultiProvider(
       providers: allProviders,
       child: MaterialApp(
-        color: ColorsTexStyleStore.kTriviaGreenColor,
-        // builder: (context, widget) => Navigator(
-        //   onGenerateRoute: (settings) => MaterialPageRoute(
-        //       builder: (context) => DialogManager(child: widget)),
-        // ),
+        color: ColorsTexStyleStore.kAppMainColor,
+
         scaffoldMessengerKey: getIt<NavigationService>().scaffoldKey,
         navigatorKey: getIt<NavigationService>().navigationKey,
         debugShowCheckedModeBanner: false,
