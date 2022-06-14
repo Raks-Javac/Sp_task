@@ -6,6 +6,7 @@ class ThemeHandler {
     return ThemeData(
       primaryColor: ColorsTexStyleStore.kAppMainColor,
       primaryColorLight: ColorsTexStyleStore.kTriviaLightYellow,
+      textTheme: const TextTheme(headline6: TextStyle(fontFamily: "NSRegular")),
       colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: ColorsTexStyleStore.kTriviaLightYellow.withOpacity(0.3)),
     );
@@ -68,5 +69,27 @@ double screenAwareSize(double value, BuildContext context,
 }
 
 class AppColors {
-  static Color backgroundColors() => const Color(0xFF222222);
+  static Color backgroundColors() => const Color(0xFFF7F9FA);
 }
+
+TextStyle normalTextStyle(BuildContext context) {
+  return const TextStyle(color: Colors.black, fontFamily: "NSRegular");
+}
+
+TextStyle boldTextStyle(BuildContext context) {
+  return const TextStyle(color: Colors.black, fontFamily: "NSBold");
+}
+
+TextStyle ligthTextStyle(BuildContext context) {
+  return const TextStyle(color: Colors.black, fontFamily: "NSLight");
+}
+
+TextStyle mediumTextStyle(BuildContext context) {
+  return const TextStyle(color: Colors.black, fontFamily: "NSMedium");
+}
+
+TextStyle thinTextStyle(BuildContext context) {
+  return const TextStyle(color: Colors.black, fontFamily: " NSThin");
+}
+
+Color? get appColor => Colors.purple[800];
