@@ -14,12 +14,8 @@ class FirstScreen extends StatelessWidget {
 
   Widget _buildScreen(BuildContext context, FirstScreenViewModel viewModel) {
     return Scaffold(
-      body: Center(
-        child: TextButton.icon(
-            onPressed: viewModel.startLoadingAndNavigateToNext,
-            icon: const Icon(Icons.play_arrow_rounded),
-            label: const Text("Start loading")),
-      ),
-    );
+        body: Column(
+      children: const [],
+    ));
   }
 }
