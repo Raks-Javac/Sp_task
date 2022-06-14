@@ -30,7 +30,7 @@ class _ProviderAppState extends State<ProviderApp> {
         title: StringsStore.kAppName,
         theme: ThemeHandler.lightMode,
         // home:  const TestApi(),
-        home: const FirstScreen(),
+        home:  FirstScreen(),
       ),
     );
   }
