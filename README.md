@@ -1,3 +1,3 @@
-# architect_flutter_network_services 
+# Sp Task 
 
-a flutter project demonstrating a couple of tips on how to make api calls the right way
+a simple app made with flutter
