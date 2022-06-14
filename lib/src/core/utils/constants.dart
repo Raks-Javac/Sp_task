@@ -20,13 +20,7 @@ class StringsStore {
   static const String emptyUsernameField = 'Username  cannot be empty';
   static const String usernameLengthError =
       'Username length must be greater than 6';
-  static const String emailRegex = '[a-zA-Z0-9+._%-+]{1,256}' '\\@' +
-      '[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}' +
-      '(' +
-      '\\.' +
-      '[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}' +
-      ')+';
-
+ 
   static const String phoneNumberRegex = r'0[789][01]\d{8}';
 
   static const String phoneNumberLengthError = 'Phone number must be 11 digits';

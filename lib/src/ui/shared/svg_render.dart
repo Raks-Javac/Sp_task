@@ -7,7 +7,11 @@ class RenderSvg extends StatelessWidget {
   final Color? color;
   final double? svgWidth;
   const RenderSvg(
-      {Key? key, this.svgHeight, required this.svgPath, this.svgWidth,this.color})
+      {Key? key,
+      this.svgHeight,
+      required this.svgPath,
+      this.svgWidth,
+      this.color})
       : super(key: key);
 
   @override

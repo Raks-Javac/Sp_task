@@ -91,3 +91,5 @@ TextStyle mediumTextStyle(BuildContext context) {
 TextStyle thinTextStyle(BuildContext context) {
   return const TextStyle(color: Colors.black, fontFamily: " NSThin");
 }
+
+Color? get appColor => Colors.purple[800];

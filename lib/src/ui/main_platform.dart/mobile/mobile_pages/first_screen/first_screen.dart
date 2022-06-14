@@ -4,10 +4,9 @@ import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/fir
 import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/first_screen/widget/wallets.dart';
 import 'package:estate_project/src/ui/shared/svg_render.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
-class FirstScreen extends StatelessWidget {
-  FirstScreen({Key? key}) : super(key: key);
+class ServicesScreen extends StatelessWidget {
+  ServicesScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return BaseView<FirstScreenViewModel>(
@@ -17,6 +16,7 @@ class FirstScreen extends StatelessWidget {
   }
 
   final quickActionsList = QuickActions();
+  final quickService = QuickServices();
 
   Widget _buildScreen(BuildContext context, FirstScreenViewModel viewModel) {
     return Scaffold(
@@ -40,29 +40,173 @@ class FirstScreen extends StatelessWidget {
             ),
           ],
         ),
-        body: Container(
-          margin: EdgeInsets.symmetric(
-            horizontal: screenAwareSize(40, context),
-            vertical: screenAwareSize(15, context),
-          ),
-          child: Column(
-            children: [
-              WalletBalanceSection(),
-              UIHelper.verticalSpaceMedium,
-              Row(
-                children: quickActionsList.quickTIonList().map((e) {
-                  return Expanded(
-                    child: TileAction(
-                      label: e.actionType!,
-                      tileColor: e.actionColor!,
-                      svgpath: e.svgIconPath!,
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.symmetric(
+              horizontal: screenAwareSize(40, context),
+              vertical: screenAwareSize(15, context),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                //wallet section
+                const WalletBalanceSection(),
+         
+                UIHelper.verticalSpaceMedium,
+
+                //quick actions section
+                QuickActionsWidget(quickActionsList: quickActionsList),
+                UIHelper.verticalSpaceMedium,
+
+                //quick services section
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "Quick Services",
+                      style: mediumTextStyle(context).copyWith(
+                        fontSize: screenAwareSize(30, context),
+                      ),
                     ),
-                  );
-                }).toList(),
-              )
-            ],
+                    UIHelper.verticalSpaceSmall,
+                    Row(
+                      children: quickService.quickTIonList().map((e) {
+                        return Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10)),
+                            margin: EdgeInsets.symmetric(
+                                horizontal: screenAwareSize(10, context),
+                                vertical: screenAwareSize(0, context)),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: screenAwareSize(5, context),
+                                vertical: screenAwareSize(30, context)),
+                            child: Column(
+                              children: [
+                                RenderSvg(
+                                  svgPath: e.svgIconPath!,
+                                  color: appColor,
+                                ),
+                                UIHelper.verticalSpaceSmall,
+                                Text(
+                                  e.actionType.toString(),
+                                  style: normalTextStyle(context).copyWith(
+                                      fontSize: screenAwareSize(23, context)),
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
+
+                    //referral section
+                    UIHelper.verticalSpaceSmall,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Refer And Earn",
+                          style: mediumTextStyle(context).copyWith(
+                            fontSize: screenAwareSize(30, context),
+                          ),
+                        ),
+                        UIHelper.verticalSpaceSmall,
+                        Container(
+                          height: screenAwareSize(240, context),
+                          width: deviceWidth(context),
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(10)),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(
+                                "assets/images/pngs/Wallet banner.png",
+                              ),
+                            ),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 20.0,
+                              vertical: 15,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                RichText(
+                                  textAlign: TextAlign.start,
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'Refer a ',
+                                        style: boldTextStyle(context)
+                                            .copyWith(color: Colors.white),
+                                      ),
+                                      TextSpan(
+                                        text: ' Friend ',
+                                        style: boldTextStyle(context)
+                                            .copyWith(color: Colors.yellow),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                                UIHelper.verticalSpaceSmall,
+                                Text(
+                                  "Earn Extra Cash",
+                                  style: boldTextStyle(context)
+                                      .copyWith(color: Colors.white),
+                                ),
+                                UIHelper.verticalSpaceSmall,
+                                RawMaterialButton(
+                                  onPressed: () {},
+                                  fillColor: Colors.white,
+                                  elevation: 0,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                  child: Text(
+                                    "Get Started",
+                                    style: normalTextStyle(context).copyWith(
+                                      fontSize: screenAwareSize(20, context),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
+              ],
+            ),
           ),
         ));
+  }
+}
+
+class QuickActionsWidget extends StatelessWidget {
+  const QuickActionsWidget({
+    Key? key,
+    required this.quickActionsList,
+  }) : super(key: key);
+
+  final QuickActions quickActionsList;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: quickActionsList.quickTIonList().map((e) {
+        return Expanded(
+          child: TileAction(
+            label: e.actionType!,
+            tileColor: e.actionColor!,
+            svgpath: e.svgIconPath!,
+          ),
+        );
+      }).toList(),
+    );
   }
 }
 
@@ -129,6 +273,30 @@ class QuickActions {
           svgIconPath: "assets/images/svgs/transactions.svg",
           actionType: "Transactions",
           actionColor: Colors.purple[800])
+    ];
+  }
+}
+
+class QuickServices {
+  final String? svgIconPath;
+  final String? actionType;
+
+  QuickServices({this.actionType, this.svgIconPath});
+
+  List<QuickServices> quickTIonList() {
+    return <QuickServices>[
+      QuickServices(
+        svgIconPath: "assets/images/svgs/airtime.svg",
+        actionType: "Airtime",
+      ),
+      QuickServices(
+        svgIconPath: "assets/images/svgs/paybill.svg",
+        actionType: "Pay Bill",
+      ),
+      QuickServices(
+        svgIconPath: "assets/images/svgs/SplitPay.svg",
+        actionType: "Split Pay",
+      ),
     ];
   }
 }
