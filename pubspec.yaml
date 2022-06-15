@@ -21,7 +21,8 @@ dependencies:
   shared_preferences: ^2.0.8
   flutter_svg: ^0.22.0
   intl: ^0.17.0
-  swipe_cards: ^1.0.0
+  swipeable_card_stack: ^0.0.5
+
 
 dev_dependencies:
   flutter_test:

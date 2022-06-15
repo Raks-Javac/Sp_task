@@ -1,6 +1,6 @@
 import 'package:estate_project/src/core/utils/styles.dart';
 import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/first_screen/first_screen.dart';
-import 'package:estate_project/src/ui/shared/svg_render.dart';
+import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/others/others.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -63,29 +63,35 @@ class _UserMainDashBoardState extends State<UserMainDashBoard> {
             border: Border.all(color: Colors.white),
             items: [
               BottomNavigationBarItem(
-                  label: 'Chat',
-                  icon: RenderSvg(
-                    svgPath: "assets/images/svgs/chat.svg",
-                    color: Colors.grey[400],
-                  )),
+                label: 'Chat',
+                icon: ImageIcon(
+                  const AssetImage('assets/images/pngs/chat.png'),
+                  size: screenAwareSize(45, context),
+                ),
+              ),
               BottomNavigationBarItem(
-                  label: 'Scan',
-                  icon: RenderSvg(
-                    svgPath: "assets/images/svgs/scan1.svg",
-                    color: Colors.grey[400],
-                  )),
+                label: 'Scan',
+                icon: ImageIcon(
+                  const AssetImage('assets/images/pngs/scan1.png'),
+                  size: screenAwareSize(45, context),
+                ),
+              ),
               BottomNavigationBarItem(
-                  label: 'Services',
-                  icon: RenderSvg(
-                    svgPath: "assets/images/svgs/services.svg",
-                    color: appColor,
-                  )),
+                label: 'Services',
+                icon: ImageIcon(
+                  const AssetImage('assets/images/pngs/services.png'),
+                  size: screenAwareSize(45, context),
+                ),
+              ),
               BottomNavigationBarItem(
-                  label: 'Me',
-                  icon: RenderSvg(
-                    svgPath: "assets/images/svgs/Me.svg",
-                    color: Colors.grey[400],
-                  )),
+                label: 'Me',
+                icon: ImageIcon(
+                  const AssetImage(
+                    'assets/images/pngs/Me.png',
+                  ),
+                  size: screenAwareSize(45, context),
+                ),
+              )
             ]),
         tabBuilder: (context, index) {
           updateIndex(_controller.index);
@@ -93,11 +99,11 @@ class _UserMainDashBoardState extends State<UserMainDashBoard> {
             case 0:
               return CupertinoTabView(
                   navigatorKey: firstTabNavKey,
-                  builder: (context) => ServicesScreen());
+                  builder: (context) => const BlankPage());
             case 1:
               return CupertinoTabView(
                   navigatorKey: secondTabNavKey,
-                  builder: (context) => ServicesScreen());
+                  builder: (context) => const BlankPage());
             case 2:
               return CupertinoTabView(
                   navigatorKey: thirdTabNavKey,
@@ -105,12 +111,12 @@ class _UserMainDashBoardState extends State<UserMainDashBoard> {
             case 3:
               return CupertinoTabView(
                   navigatorKey: fourthTabNavKey,
-                  builder: (context) => ServicesScreen());
+                  builder: (context) => const BlankPage());
 
             default:
               return CupertinoTabView(
                   navigatorKey: fifthTabNavKey,
-                  builder: (context) => ServicesScreen());
+                  builder: (context) => const BlankPage());
           }
         },
       ),
