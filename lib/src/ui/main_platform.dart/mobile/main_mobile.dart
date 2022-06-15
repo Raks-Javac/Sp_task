@@ -1,5 +1,3 @@
-import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/first_screen/first_screen.dart';
-import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/first_screen/widget/wallets.dart';
 import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/main_tab_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:estate_project/src/core/services/navigation_services.dart';
@@ -30,7 +28,7 @@ class _ProviderAppState extends State<ProviderApp> {
         debugShowCheckedModeBanner: false,
         title: StringsStore.kAppName,
         theme: ThemeHandler.lightMode,
-        home: UserMainDashBoard(),
+        home: const UserMainDashBoard(),
       ),
     );
   }
