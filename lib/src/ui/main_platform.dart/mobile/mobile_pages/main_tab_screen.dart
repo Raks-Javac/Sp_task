@@ -62,29 +62,35 @@ class _UserMainDashBoardState extends State<UserMainDashBoard> {
             activeColor: appColor,
             inactiveColor: Colors.grey,
             border: Border.all(color: Colors.white),
-            items: const [
+            items: [
               BottomNavigationBarItem(
                 label: 'Chat',
                 icon: ImageIcon(
                   AssetImage('assets/images/pngs/chat.png'),
+                  size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Scan',
                 icon: ImageIcon(
                   AssetImage('assets/images/pngs/scan1.png'),
+                  size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Services',
                 icon: ImageIcon(
                   AssetImage('assets/images/pngs/services.png'),
+                  size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Me',
                 icon: ImageIcon(
-                  AssetImage('assets/images/pngs/Me.png'),
+                  AssetImage(
+                    'assets/images/pngs/Me.png',
+                  ),
+                  size: screenAwareSize(45, context),
                 ),
               )
             ]),
