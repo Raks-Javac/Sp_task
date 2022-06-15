@@ -50,8 +50,10 @@ class ServicesScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 //wallet section
-                const WalletBalanceSection(),
-         
+                SizedBox(
+                    height: screenAwareSize(400, context),
+                    width: double.infinity,
+                    child: const WalletSection()),
                 UIHelper.verticalSpaceMedium,
 
                 //quick actions section
