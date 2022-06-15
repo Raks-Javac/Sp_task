@@ -1,8 +1,7 @@
 import 'package:estate_project/src/core/utils/styles.dart';
 import 'package:estate_project/src/ui/shared/reusables_ex.dart';
 import 'package:flutter/material.dart';
-import 'package:swipe_cards/draggable_card.dart';
-import 'package:swipe_cards/swipe_cards.dart';
+
 
 class WalletBalanceSection extends StatelessWidget {
   const WalletBalanceSection({

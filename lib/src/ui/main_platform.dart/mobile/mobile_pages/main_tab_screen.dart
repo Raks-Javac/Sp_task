@@ -1,7 +1,6 @@
 import 'package:estate_project/src/core/utils/styles.dart';
 import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/first_screen/first_screen.dart';
 import 'package:estate_project/src/ui/main_platform.dart/mobile/mobile_pages/others/others.dart';
-import 'package:estate_project/src/ui/shared/svg_render.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -66,28 +65,28 @@ class _UserMainDashBoardState extends State<UserMainDashBoard> {
               BottomNavigationBarItem(
                 label: 'Chat',
                 icon: ImageIcon(
-                  AssetImage('assets/images/pngs/chat.png'),
+                  const AssetImage('assets/images/pngs/chat.png'),
                   size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Scan',
                 icon: ImageIcon(
-                  AssetImage('assets/images/pngs/scan1.png'),
+                  const AssetImage('assets/images/pngs/scan1.png'),
                   size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Services',
                 icon: ImageIcon(
-                  AssetImage('assets/images/pngs/services.png'),
+                  const AssetImage('assets/images/pngs/services.png'),
                   size: screenAwareSize(45, context),
                 ),
               ),
               BottomNavigationBarItem(
                 label: 'Me',
                 icon: ImageIcon(
-                  AssetImage(
+                  const AssetImage(
                     'assets/images/pngs/Me.png',
                   ),
                   size: screenAwareSize(45, context),
