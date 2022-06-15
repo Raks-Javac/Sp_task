@@ -3,4 +3,4 @@
 a simple app made with flutter
 
 
-![Simulator Screen Shot - iPhone 8 - 2022-06-14 at 23 07 39](https://user-images.githubusercontent.com/56641192/173699930-42d811ae-eb8a-4d37-b788-23a0d9d1fe67.png)
+![Simulator Screen Shot - iPhone 8 - 2022-06-15 at 23 34 45](https://user-images.githubusercontent.com/56641192/173953465-8cb2d49d-08dd-4f6f-9bdb-7bd3a0c9378d.png)
